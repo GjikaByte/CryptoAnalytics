@@ -1,0 +1,199 @@
+.cmp-page {
+  padding: 24px 32px;
+  color: #f8fafc;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.cmp-header { margin-bottom: 24px; }
+.cmp-header h1 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  letter-spacing: -1px;
+  margin: 0;
+}
+.cmp-header h1 span { color: #06b6d4; }
+.cmp-header p {
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  color: #94a3b8;
+  margin: 6px 0 0 0;
+}
+
+.cmp-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+  align-items: center;
+}
+
+.cmp-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px 8px 8px;
+  background: rgba(6,182,212,0.06);
+  border: 1px solid rgba(6,182,212,0.25);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.cmp-chip:hover { border-color: #06b6d4; background: rgba(6,182,212,0.12); }
+.cmp-chip-icon {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 11px;
+}
+.cmp-chip-name {
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #f8fafc;
+}
+.cmp-chip-x {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0 0 0 6px;
+  line-height: 1;
+}
+.cmp-chip-x:hover { color: #ff4d6d; }
+
+.cmp-search-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 240px;
+  max-width: 340px;
+}
+.cmp-search {
+  width: 100%;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 999px;
+  padding: 10px 16px;
+  color: #f8fafc;
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+.cmp-search:focus { border-color: #06b6d4; background: rgba(6,182,212,0.04); }
+.cmp-search::placeholder { color: #475569; }
+
+.cmp-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0; right: 0;
+  background: #0d121c;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 10;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+}
+.cmp-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 10px 14px;
+  cursor: pointer;
+  text-align: left;
+  color: #f8fafc;
+  transition: background 0.15s ease;
+}
+.cmp-dropdown-item:hover { background: rgba(6,182,212,0.08); }
+.cmp-icon-sm {
+  width: 24px; height: 24px;
+  border-radius: 6px;
+  display: grid; place-items: center;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 10px;
+  flex-shrink: 0;
+}
+.cmp-dd-name { flex: 1; font-size: 13px; }
+.cmp-dd-sym {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.cmp-empty {
+  padding: 60px 20px;
+  text-align: center;
+  background: rgba(255,255,255,0.015);
+  border: 1px dashed rgba(255,255,255,0.08);
+  border-radius: 16px;
+  color: #94a3b8;
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+}
+
+.cmp-table-wrap {
+  background: rgba(255,255,255,0.015);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.cmp-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.cmp-table th, .cmp-table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+}
+.cmp-table tbody tr:last-child td { border-bottom: none; }
+
+.cmp-th-coin {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.cmp-th-coin > div { display: flex; flex-direction: column; }
+.cmp-th-coin strong {
+  color: #f8fafc;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+.cmp-th-coin span {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.cmp-row-label {
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 11px;
+  width: 200px;
+}
+.cmp-cell { color: #f8fafc; }
+.cmp-cell.cell-best {
+  color: #06b6d4;
+  background: rgba(6,182,212,0.06);
+}
+.cmp-cell.cell-worst {
+  color: #ff4d6d;
+  background: rgba(255,77,109,0.04);
+}
+
+@media (max-width: 768px) {
+  .cmp-page { padding: 16px; }
+  .cmp-table th, .cmp-table td { padding: 10px 12px; font-size: 12px; }
+  .cmp-row-label { width: auto; }
+}
